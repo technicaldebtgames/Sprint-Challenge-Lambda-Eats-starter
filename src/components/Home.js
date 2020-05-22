@@ -25,7 +25,7 @@ const Home = props => {
                         initialValues={props.initialValues}/>
             </Route>
             <Route path='/'>
-                <Link to='/pizza'><div>Get a Pizza!</div></Link>
+                <Link to='/pizza'><div className='orderForm'>Get a Pizza!</div></Link>
             </Route>
           </Switch>
         </div>
