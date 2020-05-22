@@ -9,16 +9,14 @@ const App = () => {
     userName: '',
     pizzaSize: '',
     pizzaToppings: [],
-    pizzaInstructions: '',
-    orderKey: ''
+    pizzaInstructions: 'Enter any additional instructions related to your sense of entitlement here!'
   }
 
-  const [userName, setUserName] = useState();
-  const [pizzaSize, setPizzaSize] = useState();
-  const [pizzaToppings, setPizzaToppings] = useState([]);
-  const [pizzaInstructions, setPizzaInstructions] = useState();
-  const [orderKey, setOrderKey] = useState();
-  const [pizzaOrders, setPizzaOrders] = useState([])
+  const [userName, setUserName] = useState(initialValues.userName);
+  const [pizzaSize, setPizzaSize] = useState(initialValues.pizzaSize);
+  const [pizzaToppings, setPizzaToppings] = useState(initialValues.pizzaToppings);
+  const [pizzaInstructions, setPizzaInstructions] = useState(initialValues.pizzaInstructions);
+  const [pizzaOrders, setPizzaOrders] = useState([]);
 
   return (
     <div className="App">
@@ -32,8 +30,6 @@ const App = () => {
             setPizzaInstructions={setPizzaInstructions}
             pizzaOrders={pizzaOrders}
             setPizzaOrders={setPizzaOrders}
-            orderKey={orderKey}
-            setOrderKey={setOrderKey}
             initialValues={initialValues}/>
       <Orders pizzaOrders={pizzaOrders}/>
     </div>

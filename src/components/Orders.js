@@ -1,5 +1,6 @@
 import React from 'react';
 import Order from './Order';
+import { v4 as uuid } from 'uuid';
 import './Orders.css';
 
 const Orders = props => {
@@ -9,7 +10,7 @@ const Orders = props => {
             {
                 props.pizzaOrders.map(o => {
                     return (
-                    <Order key={o.orderKey}
+                    <Order key={uuid()}
                            userName={o.userName}
                            pizzaSize={o.pizzaSize}
                            pizzaToppings={o.pizzaToppings}
