@@ -1,4 +1,5 @@
-import React, {useState} from 'react';
+import React from 'react';
+import './Form.css';
 //import {Link} from 'react-router-dom';
 
 const Form = props => {
@@ -122,7 +123,7 @@ const Form = props => {
                 <div className='pizzaInstructions-container'>
                     <textarea name='pizzaInstructions' id='pizzaInstructions' rows='5' cols='50' onChange={changeInstructions} value={props.pizzaInstructions}></textarea>
                 </div>
-                <p onClick={onSubmit}>Place your order!</p>
+                <p className='submitButton' onClick={onSubmit}>Place your order!</p>
             </form>
         </div>
     )
